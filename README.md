@@ -24,7 +24,7 @@ Windows 10, 22H2
 
 1               | 2
 ---             | ---
-OS              | [Windows 10, KirbyOS 21H1](discord.gg/KirbyCS)
+OS              | [Windows 10, KirbyOS 21H1](https://discord.gg/KirbyCS)
 Theme           | [Catppuccin](https://github.com/catppuccin/catppuccin)
 Fonts           | [Jetbrains Mono Regular](https://www.jetbrains.com/lp/mono/)
 Text redactor   | [N++](https://notepad-plus-plus.org/)
