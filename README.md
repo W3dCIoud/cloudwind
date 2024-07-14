@@ -20,7 +20,7 @@ Windows 10, 21H2
 Windows 10, 22H2
 ```
 
-<img align="right" src="./neofetch.png" width="580px">
+<img align="right" src="./neofetch.png" width="450px">
 
 1               | 2
 ---             | ---
