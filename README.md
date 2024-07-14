@@ -19,7 +19,7 @@ This script only for windows 10! On Windows 11 this script doesn`t work.
 Windows 10, 21H2
 Windows 10, 22H2
 ```
-
+## Some information
 <img align="right" src="./neofetch.png" width="450px">
 
 1               | 2
