@@ -52,7 +52,7 @@ echo wallpaper installed.
 echo installing font...
 set font_path=%current_dir%\bin\font.ttf
 start "" "%font_path%"
-press any key after font install is finished.
+echo press any key after font install is finished.
 timeout 99
 echo font installed.
 echo initing font...
