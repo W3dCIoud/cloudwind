@@ -9,7 +9,7 @@
 3. In cmd, type "git clone https://github.com/W3dCIoud/cloudwind/ & cd cloudwind & "cloudwind setup.bat"
 ```
 
-<img align="right" src="./neofetch.png" width="800px">
+<img align="right" src="./neofetch.png" width="600px">
 
 1               | 2
 ---             | ---
