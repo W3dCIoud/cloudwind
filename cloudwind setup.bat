@@ -96,7 +96,6 @@ echo ===========================================================================
 echo Thanks for using my script for install a cloudwind!
 echo The script maked by w3dcloud and chatgpt.
 echo For finish the instalation, u need a reboot.
-echo After reboot u need go to setting and apply a theme.
 echo Would you like to reboot?
 echo 1 - reboot.
 echo * - no, thanks.
