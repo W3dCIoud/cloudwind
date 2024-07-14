@@ -31,6 +31,7 @@ echo This script only for windows 10! On 11 this script doesn`t work.
 echo ========================================================================================================================
 echo 1 - install.
 echo * - exit.
+echo ========================================================================================================================
 set /p choice="Select option: "
 echo ========================================================================================================================
 if %choice% == 1 goto install
@@ -80,8 +81,10 @@ tar -xf "%oldnewexplorer_archive%" -C "%extractone_path%"
 start "" "%program_path%"
 start "" "%image_path%"
 echo setup the config as shown in the screenshot.
-start "" "%program_path%"
-start "" "%image_path%"
+echo setting a theme...
+set theme_path="C:\Windows\Resources\Themes\Catppuccin.theme"
+RUNDLL32.EXE shell32.dll,Control_RunDLL desk.cpl,,1
+start "" %theme_path%
 echo done.
 timeout 10
 goto end
@@ -97,6 +100,7 @@ echo After reboot u need go to setting and apply a theme.
 echo Would you like to reboot?
 echo 1 - reboot.
 echo * - no, thanks.
+echo ========================================================================================================================
 set /p choiceonend="Select option: "
 echo ========================================================================================================================
 if %choiceonend% == 1 goto reboot
