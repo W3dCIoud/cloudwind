@@ -27,7 +27,7 @@ echo   W W   A  A R  RR N   N III N   N  GGG  !!!
 echo ========================================================================================================================
 echo You do everything at your own risk. 
 echo I am not responsible for your system, if something happens to the system - reinstall or restore the system.
-echo This script only for windows 10! On 11 this script doesen`t work.
+echo This script only for windows 10! On 11 this script doesn`t work.
 echo ========================================================================================================================
 echo 1 - install.
 echo * - exit.
