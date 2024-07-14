@@ -1,6 +1,6 @@
 <h1 align="center">Hello windows, i`m cloudwind.</h1>
 
-
+[preview of installer](./preview.png)
 
 ## How to install a cloudwind?
 ```
@@ -8,6 +8,9 @@
 2. Open a cmd.
 3. In cmd, type "git clone https://github.com/W3dCIoud/cloudwind/ & cd cloudwind & "cloudwind setup.bat"
 ```
+
+<img align="right" src="./neofetch.png" width="400px">
+
 1               | 2
 ---             | ---
 OS              | [Windows 10, KirbyOS 21H1](discord.gg/KirbyCS)
