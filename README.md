@@ -8,7 +8,7 @@
 2. Open a cmd.
 3. In cmd, type "git clone https://github.com/W3dCIoud/cloudwind/ & cd cloudwind & "cloudwind setup.bat"
 ```
-category        | value
+1               | 2
 ---             | ---
 OS              | [Windows 10, KirbyOS 21H1](discord.gg/KirbyCS)
 Theme           | [Catppuccin](https://github.com/catppuccin/catppuccin)
