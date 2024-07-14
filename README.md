@@ -1,6 +1,6 @@
 <h1 align="center">Hello windows, i`m cloudwind.</h1>
 
-![preview](./preview.png)
+
 
 ## WARNING!
 You do everything at your own risk. 
