@@ -9,7 +9,7 @@ This script only for windows 10! On Windows 11 this script doesn`t work.
 
 ## How to install a cloudwind?
 ```
-1. Install a [git on windows](https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe)
+1. Install a git on windows (https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe)
 2. Open a cmd.
 3. In cmd, type "git clone https://github.com/W3dCIoud/cloudwind/ & cd cloudwind & "cloudwind setup.bat"
 ```
