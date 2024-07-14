@@ -27,6 +27,6 @@ Windows 10, 22H2
 OS              | [Windows 10, KirbyOS 21H1](discord.gg/KirbyCS)
 Theme           | [Catppuccin](https://github.com/catppuccin/catppuccin)
 Fonts           | [Jetbrains Mono Regular](https://www.jetbrains.com/lp/mono/)
-Text redactor   | [N++]([https://neovim.io](https://notepad-plus-plus.org/))
+Text redactor   | [N++](https://notepad-plus-plus.org/)
 Videoplayer     | [VLC](https://www.videolan.org/)
 Browser         | [Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
