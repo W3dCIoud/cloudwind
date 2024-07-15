@@ -5,7 +5,7 @@ You do everything at your own risk.
 I am not responsible for your system, if something happens to the system - reinstall or restore the system.
 This script only for windows 10! On Windows 11 this script doesn`t work.
 
-![preview](./preview.png)
+![preview1](./preview.png)
 
 ## How to install a cloudwind?
 ```
