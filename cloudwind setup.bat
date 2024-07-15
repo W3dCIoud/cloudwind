@@ -6,7 +6,7 @@ if %errorLevel% neq 0 (
     powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit /b
 )
-title cloudwind installer / @w3dcloudriver
+title cloudwind installer / @cloudwindtg
 :menu
 cls
 echo ========================================================================================================================
@@ -19,6 +19,7 @@ echo ===========================================================================
 echo Hello! 
 echo This is installer of cloudwind - custom for windows 10.
 echo All custom tested on KirbyOS 27.06.2024 21H1.
+echo Our telegram channel: @cloudwindtg
 echo ========================================================================================================================
 echo W     W  AA  RRRR  N   N III N   N  GGG  !!!
 echo W     W A  A R   R NN  N  I  NN  N G     !!! 
@@ -42,6 +43,7 @@ if %choice% == * goto close
 
 :install
 cls
+title cloudwind installer / @cloudwindtg / default installation
 echo 1. =====================================================================================================================
 echo installing ultrauxthemepatcher(do not reboot)...
 set current_dir=%~dp0
@@ -101,13 +103,17 @@ timeout 10
 goto end
 
 :installwp
-echo soon...
-timeout 5
-goto install
+title cloudwind installer / @cloudwindtg / download another release!
+echo ========================================================================================================================
+echo Download another release.
+start https://github.com/W3dCIoud/cloudwind-wprograms/releases.
+echo ========================================================================================================================
+timeout 15
+goto menu
 
 :end
 cls
-title installation has finished / @w3dcloudriver
+title cloudwind installer / @cloudwindtg / installation is finished.
 echo =======================================================================================================================
 echo Thanks for using my script for install a cloudwind!
 echo The script maked by w3dcloud and chatgpt.
@@ -122,10 +128,16 @@ if %choiceonend% == 1 goto reboot
 if %choiceonend% == * goto close
 
 :reboot
+title cloudwind installer / @cloudwindtg / reboot
+cls
+echo ========================================================================================================================
 echo Thanks for using my script!
 echo The computer reboots after 5 seconds.
+echo ========================================================================================================================
 shutdown -r -t 5
 
 :close
+echo ========================================================================================================================
 echo The script has terminated. Press any key to close the script.
+echo ========================================================================================================================
 pause
