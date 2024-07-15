@@ -30,3 +30,6 @@ Fonts           | [Jetbrains Mono Regular](https://www.jetbrains.com/lp/mono/)
 Text redactor   | [N++](https://notepad-plus-plus.org/)
 Videoplayer     | [VLC](https://www.videolan.org/)
 Browser         | [Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+
+## New info.
+If u need a new script with a programs, go to [this repo](https://github.com/W3dCIoud/cloudwind-wprograms).
