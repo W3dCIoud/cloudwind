@@ -101,51 +101,9 @@ timeout 10
 goto end
 
 :installwp
-echo Checking if all required files are present...
-set current_dir=%~dp0
-if not exist "%current_dir%\bin\ug.exe" echo Ungoogled Chromium installer (ug.exe) not found! && goto end
-if not exist "%current_dir%\bin\dsc.exe" echo Discord installer (dsc.exe) not found! && goto end
-if not exist "%current_dir%\bin\n.exe" echo NVIDIA App installer (n.exe) not found! && goto end
-if not exist "%current_dir%\bin\s.exe" echo Steam installer (s.exe) not found! && goto end
-if not exist "%current_dir%\bin\w.exe" echo Wo Mic Client installer (w.exe) not found! && goto end
-if not exist "%current_dir%\bin\ever.exe" echo Everything installer (ever.exe) not found! && goto end
-
-cls
-echo ========================================================================================================================
-echo Installing Ungoogled Chromium...
-start /wait "" "%current_dir%\bin\ug.exe" --silent
-echo installed.
-echo ========================================================================================================================
-
-echo ========================================================================================================================
-echo Installing Discord...
-start /wait "" "%current_dir%\bin\dsc.exe" --silent
-echo installed.
-echo ========================================================================================================================
-
-echo ========================================================================================================================
-echo Installing NVIDIA App...
-start /wait "" "%current_dir%\bin\n.exe" /S
-echo installed.
-echo ========================================================================================================================
-
-echo ========================================================================================================================
-echo Installing Steam...
-start /wait "" "%current_dir%\bin\s.exe" /S
-echo installed.
-echo ========================================================================================================================
-
-echo ========================================================================================================================
-echo Installing Wo Mic Client...
-start /wait "" "%current_dir%\bin\w.exe" /S
-echo installed.
-echo ========================================================================================================================
-
-echo ========================================================================================================================
-echo Installing Everything...
-start /wait "" "%current_dir%\bin\ever.exe" /S
+echo soon...
+timeout 5
 goto install
-echo ========================================================================================================================
 
 :end
 cls
