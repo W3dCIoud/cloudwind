@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo The script requested a admin previleuge...
@@ -30,18 +31,23 @@ echo I am not responsible for your system, if something happens to the system - 
 echo This script only for windows 10! On 11 this script doesn`t work.
 echo ========================================================================================================================
 echo 1 - install.
+echo 2 - install with programs.
 echo * - exit.
 echo ========================================================================================================================
 set /p choice="Select option: "
 echo ========================================================================================================================
 if %choice% == 1 goto install
+if %choice% == 2 goto installwp
 if %choice% == * goto close
 
 :install
+cls
+echo 1. =====================================================================================================================
 echo installing ultrauxthemepatcher(do not reboot)...
 set current_dir=%~dp0
 "%current_dir%bin\themepatcher.exe"
 echo installed ultrauxthemepatcher.
+echo 2. =====================================================================================================================
 echo setting wallpaper...
 set wallpaper_path=%current_dir%\bin\wp.png
 set system_wallpaper_path=C:\Windows\Web\Wallpaper\wp.png
@@ -49,12 +55,14 @@ copy "%wallpaper_path%" "%system_wallpaper_path%"
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%system_wallpaper_path%" /f
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 echo wallpaper installed.
+echo 3. =====================================================================================================================
 echo installing font...
 set font_path=%current_dir%\bin\font.ttf
 start "" "%font_path%"
 echo press any key after font install is finished.
 timeout 99
 echo font installed.
+echo 4. =====================================================================================================================
 echo initing font...
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Bold (TrueType)" /t REG_SZ /d "" /f
@@ -65,11 +73,13 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI S
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Symbol (TrueType)" /t REG_SZ /d "" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes" /v "Segoe UI" /t REG_SZ /d "JetBrains Mono" /f
 echo inited! needed a reboot.
+echo 5. =====================================================================================================================
 echo installing a theme...
 set theme_archive=%current_dir%\bin\t.zip
 set extract_path=C:\Windows\Resources\Themes
 tar -xf "%theme_archive%" -C "%extract_path%"
 echo installed.
+echo 6. =====================================================================================================================
 echo installing oldnewexplorer...
 set oldnewexplorer_archive=%current_dir%\bin\one.zip
 set extractone_path=C:\Windows\Web\Wallpaper\OldNewExplorer
@@ -81,21 +91,69 @@ tar -xf "%oldnewexplorer_archive%" -C "%extractone_path%"
 start "" "%program_path%"
 start "" "%image_path%"
 echo setup the config as shown in the screenshot.
+echo 7. =====================================================================================================================
 echo setting a theme...
-set theme_path="C:\Windows\Resources\Themes\Catppuccin.theme"
-RUNDLL32.EXE shell32.dll,Control_RunDLL desk.cpl,,1
+set theme_path="C:\Windows\Resources\Themes\Catppuccin Night S2.theme"
 start "" %theme_path%
+echo 8. =====================================================================================================================
 echo done.
 timeout 10
 goto end
 
+:installwp
+echo Checking if all required files are present...
+set current_dir=%~dp0
+if not exist "%current_dir%\bin\ug.exe" echo Ungoogled Chromium installer (ug.exe) not found! && goto end
+if not exist "%current_dir%\bin\dsc.exe" echo Discord installer (dsc.exe) not found! && goto end
+if not exist "%current_dir%\bin\n.exe" echo NVIDIA App installer (n.exe) not found! && goto end
+if not exist "%current_dir%\bin\s.exe" echo Steam installer (s.exe) not found! && goto end
+if not exist "%current_dir%\bin\w.exe" echo Wo Mic Client installer (w.exe) not found! && goto end
+if not exist "%current_dir%\bin\ever.exe" echo Everything installer (ever.exe) not found! && goto end
+
+cls
+echo ========================================================================================================================
+echo Installing Ungoogled Chromium...
+start /wait "" "%current_dir%\bin\ug.exe" --silent
+echo installed.
+echo ========================================================================================================================
+
+echo ========================================================================================================================
+echo Installing Discord...
+start /wait "" "%current_dir%\bin\dsc.exe" --silent
+echo installed.
+echo ========================================================================================================================
+
+echo ========================================================================================================================
+echo Installing NVIDIA App...
+start /wait "" "%current_dir%\bin\n.exe" /S
+echo installed.
+echo ========================================================================================================================
+
+echo ========================================================================================================================
+echo Installing Steam...
+start /wait "" "%current_dir%\bin\s.exe" /S
+echo installed.
+echo ========================================================================================================================
+
+echo ========================================================================================================================
+echo Installing Wo Mic Client...
+start /wait "" "%current_dir%\bin\w.exe" /S
+echo installed.
+echo ========================================================================================================================
+
+echo ========================================================================================================================
+echo Installing Everything...
+start /wait "" "%current_dir%\bin\ever.exe" /S
+goto install
+echo ========================================================================================================================
+
 :end
 cls
-title instalation has finished / @w3dcloudriver
+title installation has finished / @w3dcloudriver
 echo =======================================================================================================================
 echo Thanks for using my script for install a cloudwind!
 echo The script maked by w3dcloud and chatgpt.
-echo For finish the instalation, u need a reboot.
+echo For finish the installation, you need a reboot.
 echo Would you like to reboot?
 echo 1 - reboot.
 echo * - no, thanks.
@@ -111,5 +169,5 @@ echo The computer reboots after 5 seconds.
 shutdown -r -t 5
 
 :close
-echo The script has killed. Press any key to close a script.
+echo The script has terminated. Press any key to close the script.
 pause
